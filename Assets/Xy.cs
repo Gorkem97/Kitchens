@@ -73,7 +73,7 @@ public class Xy : MonoBehaviour
             UI2.SetActive(false);
             GetComponent<rigidMove>().yazi = false;
         }
-        Collider[] hitColliders = Physics.OverlapBox(gameObject.transform.position, transform.localScale / 2, Quaternion.identity) ;
+        Collider[] hitColliders = Physics.OverlapBox(gameObject.transform.position, transform.localScale* 499/1000, Quaternion.identity) ;
         if (hitColliders != null && hitColliders.Length > 1 && active)
         {
             isTrig = true;
