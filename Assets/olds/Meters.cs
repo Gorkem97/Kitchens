@@ -14,14 +14,6 @@ public class Meters : MonoBehaviour
 
     float width;
     float length;
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-    }
     public void Widthing()
     {
         width = float.Parse(wid.text);
@@ -34,12 +26,7 @@ public class Meters : MonoBehaviour
     }
     public void Plane()
     {
-        transform.localScale = new Vector3(length, 1, width);
-        foreach (GameObject t in GameObject.FindGameObjectsWithTag("obj"))
-        {
-            t.GetComponent<Movable>().Limits(length, width);
-        }
-       // yuay.SetActive(false);
+        transform.localScale = new Vector3(length/5, 1, width/5);
     }
 
 }
