@@ -61,12 +61,14 @@ public class rigidMove : MonoBehaviour
     }
     private void Update()
     {
+        
         if (!isOn && Input.GetMouseButtonDown(0))
         {
             DragBar.SetActive(false);
             dragLock = true;
             Rhander.material = real;
         }
+        
     }
     private void OnMouseExit()
     {
@@ -89,5 +91,11 @@ public class rigidMove : MonoBehaviour
         Rhander.material = fade;
         dragLock = false;
         DragBar.SetActive(false);
+    }
+    public void IsOn()
+    {
+        DragBar.SetActive(false);
+        dragLock = true;
+        Rhander.material = real;
     }
 }
